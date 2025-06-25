@@ -7,9 +7,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorting.AbstractSorting;
-import sorting.simpleSorting.BubbleSort;
-import sorting.simpleSorting.SelectionSort;
-import sorting.simpleSorting.InsertionSort;
+//import sorting.simpleSorting.BubbleSort;
+//import sorting.simpleSorting.SelectionSort;
+//import sorting.simpleSorting.InsertionSort;
+import sorting.variationsOfBubblesort.BidirectionalBubbleSort;
 
 public class StudentSortingTest {
 
@@ -41,7 +42,7 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = new InsertionSort<Integer>();
+		this.implementation = new BidirectionalBubbleSort<Integer>();
 		//Assert.fail("Implementation not provided");
 	}
 

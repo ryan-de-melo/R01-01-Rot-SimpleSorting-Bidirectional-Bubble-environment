@@ -2,6 +2,8 @@ package sorting.variationsOfBubblesort;
 
 import sorting.AbstractSorting;
 
+import static util.Util.swap;
+
 /**
  * This bubble sort variation has two internal iterations. In the first, it
  * pushes big elements to the right, like the normal bubble sort does. Then in
@@ -14,7 +16,39 @@ public class BidirectionalBubbleSort<T extends Comparable<T>> extends
 
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not Implemented yet!");
+
+		if (!(array == null || leftIndex < 0 || rightIndex > array.length - 1)) {
+
+			boolean swapped = true;
+
+			while (swapped && leftIndex < rightIndex) {
+				
+				swapped = false;
+
+				for (int i = leftIndex; i < rightIndex; i++) {
+
+					if (array[i].compareTo(array[i+1]) > 0) {
+						swap(array, i, i+1);
+						swapped = true;
+					}
+				}
+
+				rightIndex--;
+				
+				for (int k = rightIndex; k > leftIndex; k--) {
+					
+					if (array[k].compareTo(array[k-1]) < 0) {
+						swap(array, k-1, k);
+						swapped = true;
+					}
+					
+				}
+
+				leftIndex++;
+
+			}
+
+
+		}
 	}
 }
