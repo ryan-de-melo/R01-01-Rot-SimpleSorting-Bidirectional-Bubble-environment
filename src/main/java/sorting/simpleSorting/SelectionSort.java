@@ -13,39 +13,23 @@ public class SelectionSort<T extends Comparable<T>> extends AbstractSorting<T> {
 
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO: Falta implementar!!!
+
 		if (!(array == null || leftIndex < 0 || rightIndex > array.length - 1)) {
+			int pointerOfMin;
 
-			boolean swapped = true;
+			for (int i = leftIndex; i < rightIndex + 1; i++) {
+				pointerOfMin = i;
 
-			int indexOfSmallest = findIndexOfSmallest(array, leftIndex, rightIndex);
+				for (int j = i + 1; j <= rightIndex; j ++) {
 
-			while (swapped) {
-
-				swapped = false;
-
-				for (int i = leftIndex; i < rightIndex; i++) {
-
+					if (array[j].compareTo(array[pointerOfMin]) < 0) {
+						pointerOfMin = j;
+					}
 				}
-			}
 
-
-		}
-
-	}
-
-
-	public int findIndexOfSmallest(T[] array, int leftIndex, int rightIndex) {
-
-		int resultIndex = leftIndex;
-
-		for (int i = leftIndex; i < rightIndex; i++) {
-			
-			if (array[i].compareTo(array[leftIndex]) < 0) {
-				resultIndex = i;
+				swap(array, i, pointerOfMin);
 			}
 		}
-
-		return resultIndex;
 	}
+
 }
