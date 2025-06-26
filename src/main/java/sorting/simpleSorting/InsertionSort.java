@@ -15,26 +15,17 @@ public class InsertionSort<T extends Comparable<T>> extends AbstractSorting<T> {
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
 
-		/*
-		 * Pegar o primeiro elemento e inserir ele ordenado e assim por diante
-		 * 
-		 * { 4, 9, 3, 4, 0, 5, 1, 4 } 
-		 * 1. 4 está na posição certa
-		 * 2. 9 está na posição correta
-		 * 3. 3 não está na posição correta
-		 * 
-		 * Não faz necessariamente um swap voltando
-		 * 
-		 */
+		if (!(array == null || leftIndex < 0 || rightIndex > array.length - 1 || array.length == 0)) {
 
-		for (int i = leftIndex + 1; i < rightIndex + 1; i++) {
-			T key = array[i];
-			int j = i - 1;
-
-			while (j >= 0 && key.compareTo(array[j]) < 0) {
-				swap(array, i--, j--);
-			}
-
-		} 
+			for (int i = leftIndex + 1; i < rightIndex + 1; i++) {
+				T key = array[i];
+				int j = i - 1;
+	
+				while (j >= 0 && key.compareTo(array[j]) < 0) {
+					swap(array, i--, j--);
+				}
+	
+			} 
+		}
 	}
 }
