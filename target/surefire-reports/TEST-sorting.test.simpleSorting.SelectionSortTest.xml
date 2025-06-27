@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sorting.test.StudentSortingTest" time="0.193" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="sorting.test.simpleSorting.SelectionSortTest" time="0.007" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -52,12 +52,15 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testSort01" classname="sorting.test.StudentSortingTest" time="0.012"/>
-  <testcase name="testSort02" classname="sorting.test.StudentSortingTest" time="0.0"/>
-  <testcase name="testSort03" classname="sorting.test.StudentSortingTest" time="0.0"/>
-  <testcase name="testSort04" classname="sorting.test.StudentSortingTest" time="0.0"/>
-  <testcase name="testSort05" classname="sorting.test.StudentSortingTest" time="0.001"/>
-  <testcase name="testSort06" classname="sorting.test.StudentSortingTest" time="0.001"/>
-  <testcase name="testSort07" classname="sorting.test.StudentSortingTest" time="0.0"/>
-  <testcase name="testSort08" classname="sorting.test.StudentSortingTest" time="0.0"/>
+  <testcase name="testNormalVetorDulicata" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorTamanhoUm" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorPar" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorComValoresNegativos" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorImpar" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorVazio" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorRepetido" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorTamanhoDois" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorOrdenado" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalVetorIguais" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
+  <testcase name="testNormalMeioDeArray" classname="sorting.test.simpleSorting.SelectionSortTest" time="0.0"/>
 </testsuite>
