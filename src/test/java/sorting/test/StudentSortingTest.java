@@ -7,11 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 import sorting.AbstractSorting;
-//import sorting.simpleSorting.BubbleSort;
+import sorting.simpleSorting.BubbleSort;
 //import sorting.simpleSorting.SelectionSort;
 //import sorting.simpleSorting.InsertionSort;
 //import sorting.variationsOfBubblesort.BidirectionalBubbleSort;
-import sorting.variationsOfBubblesort.RecursiveBubbleSort;
+//import sorting.variationsOfBubblesort.RecursiveBubbleSort;
+//import sorting.variationsOfSelectionsort.RecursiveSelectionSort;
 
 public class StudentSortingTest {
 
@@ -31,6 +32,9 @@ public class StudentSortingTest {
 				11, 18, 36 });
 		populaVetorRepetido(new Integer[] { 4, 9, 3, 4, 0, 5, 1, 4 });
 		populaVetorIgual(new Integer[] { 6, 6, 6, 6, 6, 6 });
+		populaVetorUm(new Integer[] {1});
+		populaVetorDuplicata(new Integer[] {1, 2, 3, 1, 2, 3});
+		populaVetorOrdenado(new Integer[] {1, 2, 3, 4, 5});
 
 		getImplementation();
 	}
@@ -43,7 +47,7 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = new RecursiveBubbleSort<Integer>();
+		this.implementation = new BubbleSort<Integer>();
 		//Assert.fail("Implementation not provided");
 	}
 
@@ -111,4 +115,38 @@ public class StudentSortingTest {
 	 * SEGUIR A ESTRUTURA DOS MÉTODOS DE TESTE ACIMA DESCRITOS, ORDENANDO APENAS
 	 * UMA PARTE DO ARRAY.
 	 */
+
+
+	private Integer[] vetorTamUm;
+	private Integer[] vetorDuplicata;
+	private Integer[] vetorOrdenado;
+
+	public void populaVetorUm(Integer[] array) {
+		vetorTamUm = Arrays.copyOf(array, array.length);
+	 }
+
+	public void populaVetorDuplicata(Integer[] array) {
+		vetorDuplicata = Arrays.copyOf(array, array.length);
+	 }
+
+	public void populaVetorOrdenado(Integer[] array) {
+		vetorOrdenado = Arrays.copyOf(array, array.length);
+	 }
+
+	@Test
+	public void testSort06() {
+		genericTest(vetorTamUm);
+	}
+
+	@Test
+	public void testSort07() {
+		genericTest(vetorDuplicata);
+	}
+
+	@Test
+	public void testSort08() {
+		genericTest(vetorOrdenado);
+	}
+
+
 }
